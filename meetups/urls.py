@@ -3,5 +3,9 @@ from . import views
 
 
 urlpatterns = [
-    path('meetups/', views.index)  # domain.com/meetups
+    # domain.com/meetups
+    path('meetups/', views.index),
+
+    # domain.com/meetups/<paramater>
+    path('meetups/<slug:meetup_slug>', views.meetup_details)
 ]
