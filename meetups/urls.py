@@ -4,13 +4,13 @@ from . import views
 
 urlpatterns = [
     # domain.com/meetups
-    path('meetups/', views.index, name='all-meetups'),
+    path('', views.index, name='all-meetups'),
 
     # domain.com/meetups/success
-    path('meetups/success', views.confirm_registration,
+    path('<slug:meetup_slug>/success', views.confirm_registration,
          name='confirm-registration'),
 
     # domain.com/meetups/<paramater> GET & POST one url
-    path('meetups/<slug:meetup_slug>',
+    path('<slug:meetup_slug>',
          views.meetup_details, name='meetup-details')
 ]
