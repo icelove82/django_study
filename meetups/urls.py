@@ -6,7 +6,7 @@ urlpatterns = [
     # domain.com/meetups
     path('', views.index, name='all-meetups'),
 
-    # domain.com/meetups/success
+    # domain.com/meetups/<paramater>/success
     path('<slug:meetup_slug>/success', views.confirm_registration,
          name='confirm-registration'),
 
